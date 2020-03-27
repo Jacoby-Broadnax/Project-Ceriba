@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55" height="46" viewBox="0 0 55 46">
+  <defs>
+    <clipPath id="clip-home">
+      <rect width="55" height="46"/>
+    </clipPath>
+  </defs>
+  <g id="home" clip-path="url(#clip-home)">
+    <rect width="55" height="46" fill="rgba(255,255,255,0)"/>
+    <text id="Home-2" data-name="Home" transform="translate(4 26)" fill="#0889d1" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="7.419" y="13">Home</tspan></text>
+    <g id="home-24px" transform="translate(15 4)">
+      <path id="Path_37" data-name="Path 37" d="M0,0H24V24H0Z" fill="none"/>
+      <path id="Path_38" data-name="Path 38" d="M12,5.69l5,4.5V18H15V12H9v6H7V10.19l5-4.5M12,3,2,12H5v8h6V14h2v6h6V12h3Z" fill="#0889d1"/>
+    </g>
+  </g>
+</svg>

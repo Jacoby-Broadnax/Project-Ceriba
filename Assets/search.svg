@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55" height="46" viewBox="0 0 55 46">
+  <defs>
+    <clipPath id="clip-search">
+      <rect width="55" height="46"/>
+    </clipPath>
+  </defs>
+  <g id="search" clip-path="url(#clip-search)">
+    <rect width="55" height="46" fill="rgba(255,255,255,0)"/>
+    <text id="Search-2" data-name="Search" transform="translate(4 26)" fill="#0889d1" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="5.869" y="13">Search</tspan></text>
+    <g id="search-24px_2_" data-name="search-24px (2)" transform="translate(16 5)">
+      <path id="Path_39" data-name="Path 39" d="M0,0H24V24H0Z" fill="none"/>
+      <path id="Path_40" data-name="Path 40" d="M15.5,14h-.79l-.28-.27a6.518,6.518,0,1,0-.7.7l.27.28v.79l4.25,4.25a1.054,1.054,0,0,0,1.49-1.49Zm-6,0A4.5,4.5,0,1,1,14,9.5,4.494,4.494,0,0,1,9.5,14Z" fill="#0889d1"/>
+    </g>
+  </g>
+</svg>

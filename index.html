@@ -1,0 +1,66 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+    <title>
+        Project Ceriba
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/main.css" type="text/css">
+    <link rel="stylesheet" href="/bottom_navigation.css" type="text/css">
+    <link rel="stylesheet" href="/search.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+</html>
+<body>
+
+<header>
+    <nav>
+        <div class="logo_container">
+            <img src="images/logo.svg" alt="logo">
+        </div>
+    </nav>
+
+    <!-----------------Search Input---------------------->
+    <div class="search-wrapper" id="searchwrap">
+        <div id="searchinput" class="search-input-container" id="search-container"> <input autocomplete="off" class="search-input"
+                type="search" id="mySearch" onkeyup="searchinit()" placeholder="Search..."
+                title="Search"><i onclick="search()"
+                    class="material-icons search-icon">search</i>
+        </div>
+
+    </div>
+</header>
+
+
+
+<!----------------Bottom-Navigation-------------->
+      <div class="bottom-navigation">
+        <div class="bottom-nav-wrapper">
+            <div class="bottom-nav-button start " >
+                <input  id="nav-btn1" type="radio" name="bottom-nav">
+                <label for="nav-btn1" ><img  src="/Assets/search.svg" alt="Search"></label>
+            </div>
+            
+          
+                <div class="bottom-nav-button"
+              >
+           
+                <input id="nav-btn2" type="radio" name="bottom-nav" checked>
+               
+                <label for="nav-btn2"><img src="/Assets/home.svg" alt="Home"></label>
+            </a>
+            </div>
+       
+            
+
+            <div class="bottom-nav-button" onclick="view()">
+
+                <input id="nav-btn3" type="radio" name="bottom-nav" >
+                <label for="nav-btn3"><img src="/Assets/account.svg" alt="Account"></label>
+            </div>
+
+        </div>
+    </div>
+</body>
