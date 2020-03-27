@@ -11,6 +11,33 @@
     <link rel="stylesheet" href="/search.css" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+
+<!-----------------------Handlebars TE----------------------------->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectCeriba/ceriba', function (data) {
+            var template = Handlebars.compile($('#item-template').html())
+            $('#result').html(template(data.ceriba))
+        })
+    })
+</script>
+
+<script id="item-template" type="text/x-handlebars-template">
+ <ul>
+    {{#each this}}
+    <li>
+        <a href="">
+<div class="feed-item">
+
+</div>
+        </a>
+    </li>
+{{/each}}
+ </ul>
+</script>
+
 </head>
 </html>
 <body>
@@ -25,7 +52,7 @@
     <!-----------------Search Input---------------------->
     <div class="search-wrapper" id="searchwrap">
         <div id="searchinput" class="search-input-container" id="search-container"> <input autocomplete="off" class="search-input"
-                type="search" id="mySearch" onkeyup="searchinit()" placeholder="Search..."
+                type="search" id="search" onkeyup="searchinit()" placeholder="Search..."
                 title="Search"><i onclick="search()"
                     class="material-icons search-icon">search</i>
         </div>
@@ -33,6 +60,17 @@
     </div>
 </header>
 
+<!-----------------------Home Section------------------------------>
+
+<section id="home">
+<div class="result-container">
+    <div id="result">
+
+    </div>
+</div>
+</section>
+
+<!-----------------------Account Section--------------------------->
 
 
 <!----------------Bottom-Navigation-------------->
@@ -63,4 +101,17 @@
 
         </div>
     </div>
+
+    <!-------------------------Search---JS----------------------------->
+
+    <script>
+          function searchinit() {
+            var e, s, t;
+            for (e = document.getElementById("search").value.toUpperCase(), s = document.getElementById(
+                    "result").getElementsByTagName("li"), t = 0; t < s.length; t++) - 1 < s[t]
+                .getElementsByTagName("a")[0].innerHTML.toUpperCase().indexOf(e) ? s[t].style.display =
+                "block" : s[t].style.display = "none"
+        }
+    </script>
+
 </body>

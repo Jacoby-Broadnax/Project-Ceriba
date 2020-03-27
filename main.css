@@ -1,14 +1,31 @@
-*{padding:0px; margin:0px;}
+* {
+  padding: 0px;
+  margin: 0px;
+}
 
-*:focus{outline: none;}
+*:focus {
+  outline: none;
+}
 
-body{font-family:Arial;}
+body {
+  font-family: Arial;
+}
 
-header{position: fixed; width: 100%; background-color: white;box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);}
+header {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+}
 
-nav{;}
+nav {
+}
 
-.logo_container{margin: auto;width: 150px;}
+.logo_container {
+  margin: auto;
+  width: 150px;
+}
 
-.logo_container > img{margin-top: 5px;}
-
+.logo_container > img {
+  margin-top: 10px;
+}
