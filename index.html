@@ -29,28 +29,29 @@
     {{#each this}}
     <li>
         <a href="">
-<h3 class="">{{store}}</h3>
-<p>{{location}}</p>
+<h3 class="inv-h3">{{store}}</h3>
+<p class="inv-p">{{location}}</p>
 
 <div class="inventory-status">
-    <div class="inventory-item">
+    <div class="inventory-item {{water}}">
         <img src="water.svg"><p>Water</p>
     </div>
-    <div class="inventory-item">
+    <div class="inventory-item {{meats}}">
         <img src="meat.svg"><p>Meat</p>
     </div>
-    <div class="inventory-item">
+    <div class="inventory-item {{chicken}}" >
         <img src="chicken.svg"><p>Chicken</p>
     </div>
-    <div class="inventory-item">
+    <div class="inventory-item {{faceMasks}}">
         <img src="mask.svg"><p>Masks</p>
     </div>
-    <div class="inventory-item">
+   <div class="inventory-item {{toiletPaper}}">
         <img src="toliet.svg"><p>Toliet Paper</p>
     </div>
-    <div class="inventory-item">
+    <div class="inventory-item {{cleaning}}">
         <img src="clean.svg"><p>Cleaning Supplies</p>
     </div>
+
 </div>
 <div class="hidden_meta_data">
 

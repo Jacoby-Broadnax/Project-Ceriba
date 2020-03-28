@@ -49,3 +49,13 @@ nav {
 .inventory-item > img {width: 20px;float: left;opacity: 0.53;}
 
 .inventory-item > p {float: left;color: black;margin-left: 5px;}
+
+#result > ul > li {margin: auto; width: 92%;border: solid 1px lightgray;padding-bottom: 5px;border-radius: 7px;margin-top: 12px;list-style-type: none;}
+
+#result > ul > li > p {margin-left: 10px;}
+
+.inv-h3 {margin-left: 10px;margin-top: 10px;color: black;}
+.inv-p {margin-left: 10px;color: rgb(105, 105, 105);}
+
+.false {display: none;}
+.true {display: inline-block;}

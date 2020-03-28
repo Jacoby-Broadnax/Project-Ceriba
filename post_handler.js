@@ -8,18 +8,19 @@ $(document).ready(function () {
             url: form.attr('action'),
             data: {
                 ceriba: {
-                    water: $('#water').val(),
+                    water: $('#water').is(':checked'),
                     state: $('#state').val(),
                     business_city: $('#business_city').val(),
                     address: $('#address').val(),
                     phone: $('#business_contact_number').val(),
                     store: $('#business_name').val(),
-                    meats: $('#meat').val(),
-                    city: $('#business_city').val(),
+                    meats: $('#meat').is(':checked'),
+                    location: $('#business_city').val(),
                     timestamp: $('#timeS').val(),
                     toiletPaper: $('#toilet').is(':checked'),
                     faceMasks: $('#mask').is(':checked'),
                     cleaning: $('#cleaning').is(':checked'),
+                    chicken: $('#chicken').is(':checked'),
                 }
             },
             success: function () {
