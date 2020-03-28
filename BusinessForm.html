@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="style_business_form.css" type="text/css">
         <link rel="icon" href="favicon.ico">
      
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="/post_handler.js"></script>
     </head>
 
@@ -19,7 +19,7 @@
         <form action="https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectCeriba/ceriba" id="post">
             <div class="input_wrap">
                 <label for="business_name">Buisiness Name</label>
-                <input id="business_name" type="text" name="b_name" required>
+                <input id="business_name" type="text" name="b_name" pattern="^[^@=;\-&_'+,<>]*$" required>
             </div>
 
             <div class="input_wrap">
@@ -81,18 +81,18 @@
             </div>
 
             <div class="input_wrap">
-                <label for="business_name">City</label>
-                <input id="business_name" name="b_city" type="text" required>
+                <label for="business_city">City</label>
+                <input id="business_city" name="b_city" type="text" pattern="^[A-Za-z]*$" required>
             </div>
                 
             <div class="input_wrap">
                 <label for="address">Business Address</label>
-                <input id="address" type="text" name="b_address" required>
+                <input id="address" type="text" name="b_address" pattern="^[^@=;\-&_'+,<>]*$" required>
             </div>
 
             <div class="input_wrap">
                 <label for="business_contact_number">Business Contact Number</label>
-                <input id="business_contact_number" name="b_tel" type="tel" required>
+                <input id="business_contact_number" name="b_tel" type="tel" pattern="^[0-9]*$" required>
             </div>
             
             <div class="input_wrap">
@@ -118,10 +118,11 @@
                 </div>
             </div>
 
-            <button id="verify_submit" type="submit" value="Submit">
-                Submit</button>
+            <button id="verify_submit" type="submit" value="Submit">Submit</button>
         </form>
     </div>
+
+    
 
         
     </body>

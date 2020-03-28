@@ -102,7 +102,7 @@ input[type="checkbox"]:checked + label > img {
   margin: 10px 10px;
   display: flex;
   align-items: center;
-  padding:15px 10px;
+  padding:5px 10px;
 }
 
 .check_wrap > label > img {

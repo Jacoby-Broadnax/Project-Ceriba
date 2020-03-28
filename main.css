@@ -35,3 +35,9 @@ nav {
 #home {margin-top: 150px;;}
 
 .hidden_meta_data {display: none;}
+
+.inventory-item  {display: inline-block;}
+
+.inventory-item > img {width: 20px;float: left;}
+
+.inventory-item > p {float: left;}
