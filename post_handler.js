@@ -16,10 +16,10 @@ $(document).ready(function () {
                     store: $('#business_name').val(),
                     meats: $('#meat').val(),
                     city: $('#business_city').val(),
-                    water: $('#water').val(),
-                    water: $('#water').val(),
-                    water: $('#water').val(),
-                    water: $('#water').val(),
+                    timestamp: $('#timeS').val(),
+                    toiletPaper: $('#toilet').is(':checked'),
+                    faceMasks: $('#mask').is(':checked'),
+                    cleaning: $('#cleaning').is(':checked'),
                 }
             },
             success: function () {

@@ -12,7 +12,7 @@
     </head>
 
 
-    <body>
+    <body onload="timestampJS()">
 
     <div class="verification_wrap">
         <h4>Fill out the form below</h4>
@@ -119,10 +119,19 @@
             </div>
 
             <button id="verify_submit" type="submit" value="Submit">Submit</button>
+            <input id="timeS" type="time" name="timeStamp" value="" hidden>
         </form>
     </div>
 
-    
+    <script>
+        function timestampJS(){
+            var time = new Date();
+            var timeH = time.getHours();
+            var timeM = time.getMinutes();
+            var timestamp = String(timeH) + ":" + String(timeM);
+            document.getElementById("timeS").value = timestamp;
+        }
+    </script>
 
         
     </body>
