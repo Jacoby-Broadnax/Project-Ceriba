@@ -29,7 +29,27 @@
     {{#each this}}
     <li>
         <a href="">
-<div class="feed-item">
+<h3>{{store}}</h3>
+<p>{{location}}</p>
+
+<div class="inventory-status">
+    <div class="inventory-item">
+        <img src="water.svg"><p>Water</p>
+    </div>
+    <div class="inventory-item">
+        <img src="meat.svg"><p>Meat</p>
+    </div>
+    <div class="inventory-item">
+        <img src="chicken.svg"><p>Chicken</p>
+    </div>
+    <div class="inventory-item">
+        
+    </div>
+    <div class="inventory-item">
+        
+    </div>
+</div>
+<div class="hidden_meta_data">
 
 </div>
         </a>
@@ -100,6 +120,16 @@
             </div>
 
         </div>
+    </div>
+
+    <!-------------------------Context Popup------------------------>
+
+    <div class="popup">
+        <div class="sub_pop">
+            <h3>Null</h3>
+            <p>Null</p>
+        </div>
+        <p class="state">Mississippi</p>
     </div>
 
     <!-------------------------Search---JS----------------------------->

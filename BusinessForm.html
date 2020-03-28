@@ -6,6 +6,9 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style_business_form.css" type="text/css">
         <link rel="icon" href="favicon.ico">
+     
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="/post_handler.js"></script>
     </head>
 
 
@@ -13,15 +16,15 @@
 
     <div class="verification_wrap">
         <h4>Fill out the form below</h4>
-        <form action="BusinessCode.html">
+        <form action="https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectCeriba/ceriba" id="post">
             <div class="input_wrap">
                 <label for="business_name">Buisiness Name</label>
-                <input id="business_name" type="text" required>
+                <input id="business_name" type="text" name="b_name" required>
             </div>
 
             <div class="input_wrap">
                 <label for="state">State</label>
-                <select required id="state">
+                <select name="b_state" required id="state">
                     <option value="" selected disabled hidden>Select State</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -79,43 +82,44 @@
 
             <div class="input_wrap">
                 <label for="business_name">City</label>
-                <input id="business_name" type="text" required>
+                <input id="business_name" name="b_city" type="text" required>
             </div>
                 
             <div class="input_wrap">
                 <label for="address">Business Address</label>
-                <input id="address" type="text" required>
+                <input id="address" type="text" name="b_address" required>
             </div>
 
             <div class="input_wrap">
                 <label for="business_contact_number">Business Contact Number</label>
-                <input id="business_contact_number" type="tel" required>
+                <input id="business_contact_number" name="b_tel" type="tel" required>
             </div>
             
             <div class="input_wrap">
                 <label>Products in Stock</label>
                 <div class="check_wrap">
-                    <input type="checkbox" id="water">
-                    <label for="water"><img src="images/water.png"></label>
+                    <input type="checkbox" id="water" name="water">
+                    <label for="water"><img src="water.svg"><p>Water</p></label>
 
-                    <input type="checkbox" id="meat">
-                    <label for="meat"><img src="images/meat.png"></label>
+                    <input type="checkbox" id="meat"  name="meat">
+                    <label for="meat"><img src="meat.svg"><p>Meat</p></label>
 
-                    <input type="checkbox" id="chicken">
-                    <label for="chicken"><img src="images/chicken.png"></label>
+                    <input type="checkbox" id="chicken"  name="chicken">
+                    <label for="chicken"><img src="chicken.svg"><p>Chicken</p></label>
 
-                    <input type="checkbox" id="mask">
-                    <label for="mask"><img src="images/mask.png"></label>
+                    <input type="checkbox" id="mask"  name="mask">
+                    <label for="mask"><img src="mask.svg"><p>Masks</p></label>
 
-                    <input type="checkbox" id="toliet">
-                    <label for="toliet" id><img src="images/toliet.png"></label>
+                    <input type="checkbox" id="toliet"  name="toliet">
+                    <label for="toliet" id><img src="toliet.svg"><p>Toliet Paper</p></label>
 
-                    <input type="checkbox" id="toliet">
-                    <label for="toliet" id><img src="images/clean.png"></label>
+                    <input type="checkbox" id="cleaning"  name="cleaning">
+                    <label for="cleaning" id><img src="clean.svg"><p>Cleaning Supplies</p></label>
                 </div>
             </div>
 
-            <input id="verify_submit" type="submit" value="Submit">
+            <button id="verify_submit" type="submit" value="Submit">
+                Submit</button>
         </form>
     </div>
 
