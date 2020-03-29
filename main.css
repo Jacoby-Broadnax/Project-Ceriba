@@ -67,4 +67,5 @@ nav {
 
 @media screen and (orientation:landscape) {
 .logo_container {display: none;}
+#home {margin-top: 84px;}
 }
