@@ -1,0 +1,21 @@
+.popup {position: fixed;top: 0px; width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.548);z-index: 500;}
+
+.pop-bottom {position: fixed; left: 0px ;bottom: 0px;z-index: 501;background-color: white;padding-top: 15px;width: 100%;}
+
+.pop-text-container {}
+
+.sub-pop {margin: auto;width: 90%;;}
+
+
+
+.pop-button {width: 100%;background-color: #0889D1;height: 44px;border: none;margin-top: 10px;font-weight: bold;margin-bottom: 15px;}
+
+.spec {background-color: white;border: solid 1px lightgray;margin-bottom: 0px;}
+
+.sub-pop > .inventory-status > .inventory-item:first-of-type {margin-left: -11px;}
+
+
+
+#popup {display: none;}
+#popup:target {display: inline-block;}
+

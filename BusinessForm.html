@@ -9,10 +9,32 @@
      
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="/post_handler.js"></script>
+
+        <!-----------------------Handlebars TE----------------------------->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.getJSON('https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectCeriba/ceriba', function (data) {
+            var template = Handlebars.compile($('#item-template').html())
+            $('#outputid').html(template(data.ceriba))
+        })
+    })
+</script>
+
+<script id="item-template" type="text/x-handlebars-template">
+ <ul>
+    {{#each this}}
+<span>ID{{id}}</span>
+{{/each}}
+ </ul>
+</script>
     </head>
 
 
     <body onload="timestampJS()">
+
+  
 
     <div class="verification_wrap" id="businessForm">
         <h4>Fill out the form below</h4>
@@ -120,6 +142,7 @@
 
             <button id="verify_submit" type="submit" value="Submit" onclick="resetstuff()">Submit</button>
             <input id="timeS" type="text" name="timeStamp" value="" hidden>
+            <p id="output"></p>
         </form>
     </div>
 
@@ -168,12 +191,12 @@
         }
 
         function bsCode(){
-            document.getElementById("businessForm").style.display = "none"
-            document.getElementById("businessCode").style.display = "flex"
+            window.location.replace("../BusinessCode.html")
 
         }
 
-    
+
+
 
     </script>
 

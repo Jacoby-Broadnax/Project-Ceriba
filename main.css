@@ -43,7 +43,7 @@ nav {
 
 .inventory-item  {display: inline-block;border-right: solid 1px rgb(228, 228, 228);padding-left: 10px;padding-right: 10px;padding-top: 5px; padding-bottom: 5px;border-radius: 50px;;margin-left: 0px;margin-top: 8px;border: none;}
 
-.inventory-item:first-of-type {margin-left: 10px;}
+
 
 .inventory-status {overflow: scroll;white-space: nowrap;}
 
@@ -59,8 +59,8 @@ nav {
 
 #result {margin-bottom: 55px;;}
 
-.inv-h3 {margin-left: 10px;margin-top: 10px;color: black;}
-.inv-p {margin-left: 10px;color: rgb(105, 105, 105);}
+.inv-h3 {margin-left: 10px;margin-top: 10px;color: black;font-size: 16px;}
+.inv-p {margin-left: 10px;color: rgb(105, 105, 105);font-size: 14px;}
 
 .false {display: none;}
 .true {display: inline-block;}

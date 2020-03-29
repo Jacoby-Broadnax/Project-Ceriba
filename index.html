@@ -6,6 +6,7 @@
         Project Ceriba
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/popup.css" type="text/css">
     <link rel="stylesheet" href="/main.css" type="text/css">
     <link rel="stylesheet" href="/bottom_navigation.css" type="text/css">
     <link rel="stylesheet" href="/search.css" type="text/css">
@@ -28,7 +29,7 @@
  <ul>
     {{#each this}}
     <li>
-        <a href="#">
+        <a href="#popup" onclick="document.getElementById('Iemtuar').classList.add('{{emtuar}}');document.getElementById('Ijmsdeu').classList.add('{{jmsdeu}}');document.getElementById('Ijzeurm').classList.add('{{jzeurm}}');document.getElementById('Iuxyzqio').classList.add('{{uxyzqio}}');document.getElementById('Ijplqwnrt').classList.add('{{jplqwnrt}}');document.getElementById('Ipoyunz').classList.add('{{poyunz}}');">
 <h3 class="inv-h3">{{store}}</h3>
 <p class="inv-p">{{location}}</p>
 
@@ -96,6 +97,57 @@
     </div>
 </header>
 
+
+    <!-------------------------Context Popup------------------------>
+
+    <div class="popup" id="popup">
+       <a href="">
+
+  
+       </a> 
+        <div class="pop-bottom">
+        <div class="sub-pop">
+            
+            <div class="pop-text-container">
+                <h3>Null</h3>
+            <p>Null</p>
+            </div>
+            
+      
+    
+
+        <div class="inventory-status">
+            <div class="inventory-item " id="Iemtuar">
+            <img  src="/emtuar.svg"><p id='jm{{id}}'>Water</p>
+            </div>
+            <div class="inventory-item {{jmsdeu}}" id="Ijmsdeu">
+                <img  src="/jmsdeu.svg"><p id="se{{id}}">Meat</p>
+            </div>
+          
+            <div class="inventory-item {{jzeurm}}" id="Ijzeurm">
+                <img o src="/jzeurm.svg"><p id="ru{{id}}">Masks</p>
+            </div>
+            <div class="inventory-item {{uxyzqio}}" id="Iuxyzqio">
+                <img  src="/uxyzqio.svg"><p id="qn{{id}}">Cleaning Supplies</p>
+            </div>
+            <div class="inventory-item {{jplqwnrt}}" id="Ijplqwnrt">
+                <img  src="jplqwnrt.svg"><p id="ox{{id}}">Toilet Paper</p>
+            </div>
+            <div class="inventory-item {{poyunz}}" id="Ipoyunz">
+                <img src="poyunz.svg"><p id="oyz{{id}}">Chicken</p>
+            </div>
+        
+            
+        
+        </div>
+        <div class="popup-buttons">
+            <a href=""><button class="pop-button spec">Get Directions</button></a>
+            <a href=""><button class="pop-button">Call <span id="storeButton">Null</span></button></a>
+        </div>
+    </div>
+    </div>
+    </div>
+
 <!-----------------------Home Section------------------------------>
 
 <section id="home">
@@ -138,15 +190,7 @@
         </div>
     </div>
 
-    <!-------------------------Context Popup------------------------>
 
-    <div class="popup">
-        <div class="sub_pop">
-            <h3>Null</h3>
-            <p>Null</p>
-        </div>
-        <p class="state">Mississippi</p>
-    </div>
 
     <!-------------------------Search---JS----------------------------->
 
