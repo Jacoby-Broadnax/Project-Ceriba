@@ -23,6 +23,6 @@
   .search-input {margin-top: 10px;}
 }
 
-.filter-indicator {position: fixed; left:25px;top: 80px ;;}
+.filter-indicator {position: absolute; left:25px;top: 80px ;;}
 
 .filter-indicator > p {background-color: #0889d1;padding-top: 5px; padding-bottom: 5px; padding-left: 7px; padding-right: 7px;border-radius: 50px;color: white;}
