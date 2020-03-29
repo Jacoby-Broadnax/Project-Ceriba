@@ -31,7 +31,7 @@
 </script>
 
 
-    <body onload="idSet()">
+    <body>
 
         <header>
             <nav>
@@ -43,30 +43,38 @@
 
     <div class="verification_wrap">
         <h4>Thank you for your contribution to the success of this app. Below is your ID</h4>
-        <h1></h1>
+        <h1 id="userID"></h1>
         <p>This special ID is associated with your post. In order to delete your post, search for it in the search field. Then click on the Cog icon on your post. Then insert the above pin and the remove button will appear.</p>
         <p>Every post made will be deleted at 2am cst in order to clear out outdated posts.</p>
-    
+        <p hidden id="outputid"></p>
     </div>
-    <div id="outputid"></div>
-        <script>
-            function idSet(){
+      <script>
+        const observer = new MutationObserver(function
+        (mutations){
+            mutations.forEach(function(mutation){
+                if (mutation.addedNodes.length){
+                   isolateid();
+                }
 
-                var id = document.getElementById('outputid').innerText;
-                var recentId = id.split(' ');
-                var test = recentId;
-                console.log(test);
-               
+            })
+        
+        });
+        const idsheet = document.getElementById("outputid");
+        observer.observe(idsheet, {
+            childList:true
+        })
 
+        function isolateid(){
+            var idstring = idsheet.innerText;
+            var idtrimstring = idstring.trim();
+            var idarray = idtrimstring.split("\n");
+            var userID = idarray.pop();
+            document.getElementById("userID").innerHTML = userID;
+            window.localStorage.setItem("ID",userID)
+            console.log(localStorage.getItem("ID"))
+        }
 
-
-
-
-            }
-
-
-
-        </script>
+      </script>
 
     </body>
 

@@ -1,18 +1,19 @@
 <!DOCTYPE html >
-<html>
+<html >
 
 <head>
     <title>
         Project Ceriba
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/popup.css" type="text/css">
+    <link  rel="stylesheet" href="/popup.css" type="text/css">
+    <link rel="stylesheet" href="/style_business_form.css">
     <link rel="stylesheet" href="/main.css" type="text/css">
     <link rel="stylesheet" href="/bottom_navigation.css" type="text/css">
     <link rel="stylesheet" href="/search.css" type="text/css">
+    <meta name="theme-color" content="#0889d1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-<script src="/military.js"></script>
 <!-----------------------Handlebars TE----------------------------->
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
@@ -29,30 +30,30 @@
  <ul>
     {{#each this}}
     <li>
-        <a href="#popup" onclick="document.getElementById('Iemtuar').classList.add('{{emtuar}}');document.getElementById('Ijmsdeu').classList.add('{{jmsdeu}}');document.getElementById('Ijzeurm').classList.add('{{jzeurm}}');document.getElementById('Iuxyzqio').classList.add('{{uxyzqio}}');document.getElementById('Ijplqwnrt').classList.add('{{jplqwnrt}}');document.getElementById('Ipoyunz').classList.add('{{poyunz}}');">
+        <a href="#popup" onclick="document.getElementById('Iemtuar').classList.add('{{emtuar}}');document.getElementById('Ijmsdeu').classList.add('{{jmsdeu}}');document.getElementById('Ijzeurm').classList.add('{{jzeurm}}');document.getElementById('Iuxyzqio').classList.add('{{uxyzqio}}');document.getElementById('Ijplqwnrt').classList.add('{{jplqwnrt}}');document.getElementById('Ipoyunz').classList.add('{{poyunz}}');document.getElementById('poph3').innerHTML='{{store}}';document.getElementById('popp').innerHTML='{{location}}';document.getElementById('storeButton').innerHTML='{{store}}'">
 <h3 class="inv-h3">{{store}}</h3>
-<p class="inv-p">{{location}}</p>
+<p class="inv-p">{{location}}, {{state}}</p>
 
 
 <div class="inventory-status">
     <div class="inventory-item {{emtuar}}">
-    <img onload="if ('{{emtuar}}' == 'false'){document.getElementById('jm{{id}}').innerHTML = 'null'}" src="/emtuar.svg"><p id='jm{{id}}'>Water</p>
+    <img onload="if ('{{emtuar}}' == 'false'){document.getElementById('jm{{id}}').innerHTML = 'null';document.getElementById('jmA{{id}}').innerHTML = 'null'}" src="/emtuar.svg"><p id='jm{{id}}'><span id="jmA{{id}}" class="hidden_meta_data">{{state}}Water </span>Water</p>
     </div>
     <div class="inventory-item {{jmsdeu}}">
-        <img onload="if ('{{jmsdeu}}' == 'false'){document.getElementById('se{{id}}').innerHTML = 'null'}" src="/jmsdeu.svg"><p id="se{{id}}">Meat</p>
+        <img onload="if ('{{jmsdeu}}' == 'false'){document.getElementById('se{{id}}').innerHTML = 'null';document.getElementById('seA{{id}}').innerHTML = 'null'}" src="/jmsdeu.svg"><p id="se{{id}}"><span class="hidden_meta_data" id="seA{{id}}">{{state}}Meat</span>Meat</p>
     </div>
   
     <div class="inventory-item {{jzeurm}}">
-        <img onload="if ('{{jzeurm}}' == 'false'){document.getElementById('ru{{id}}').innerHTML = 'null'}" src="/jzeurm.svg"><p id="ru{{id}}">Masks</p>
+        <img onload="if ('{{jzeurm}}' == 'false'){document.getElementById('ru{{id}}').innerHTML = 'null';document.getElementById('ruA{{id}}').innerHTML = 'null'}" src="/jzeurm.svg"><p id="ru{{id}}"><span id="ruA{{id}}" class="hidden_meta_data">{{state}}Mask</span>Masks</p>
     </div>
     <div class="inventory-item {{uxyzqio}}">
-        <img onload="if ('{{uxyzqio}}' == 'false'){document.getElementById('qn{{id}}').innerHTML = 'null'}" src="/uxyzqio.svg"><p id="qn{{id}}">Cleaning Supplies</p>
+        <img onload="if ('{{uxyzqio}}' == 'false'){document.getElementById('qn{{id}}').innerHTML = 'null';document.getElementById('qnA{{id}}').innerHTML = 'null'}" src="/uxyzqio.svg"><p id="qn{{id}}"><span class="hidden_meta_data" id="qnA{{id}}">{{state}}Cleaning Supplies</span>Cleaning Supplies</p>
     </div>
     <div class="inventory-item {{jplqwnrt}}">
-        <img onload="if ('{{jplqwnrt}}' == 'false'){document.getElementById('ox{{id}}').innerHTML = 'null'}" src="jplqwnrt.svg"><p id="ox{{id}}">Toilet Paper</p>
+        <img onload="if ('{{jplqwnrt}}' == 'false'){document.getElementById('ox{{id}}').innerHTML = 'null';document.getElementById('oxA{{id}}').innerHTML = 'null'}" src="jplqwnrt.svg"><p id="ox{{id}}"><span id="oxA{{id}}" class="hidden_meta_data">{{state}}Toilet Paper</span>Toilet Paper</p>
     </div>
     <div class="inventory-item {{poyunz}}" >
-        <img onload="if ('{{poyunz}}' == 'false'){document.getElementById('oyz{{id}}').innerHTML = 'null'}" src="poyunz.svg"><p id="oyz{{id}}">Chicken</p>
+        <img onload="if ('{{poyunz}}' == 'false'){document.getElementById('oyz{{id}}').innerHTML = 'null'}" src="poyunz.svg"><p id="oyz{{id}}"><span class="hidden_meta_data">{{state}}</span>Chicken</p>
     </div>
 
     
@@ -61,8 +62,8 @@
 
 <div class="hidden_meta_data">
   
-    <p></p>
-    <p></p>
+    <p>{{state}}{{store}}</p>
+    <p>{{state}}{{location}}</p>
     <p></p>
 
 </div>
@@ -77,25 +78,130 @@
 
 </head>
 </html>
-<body>
+<body >
+
+<div class="welcome" id="welcome" >
+    <div class="sub-welcome">
+        <div class="initial" id="initial">
+            <div class="logo_container">
+                <img onload="document.getElementById('welcome').classList.add(localStorage.getItem('setup'));document.getElementById('search').value =(localStorage.getItem('CStateM'));document.getElementById('searchIndicator').innerHTML = (localStorage.getItem('CStateM'));" src="images/logo.svg"  alt="logo">
+            </div>
+            <div class="banner-image">
+                <img src="/Images/undraw_healthy_options_sdo3.svg">
+            </div>
+            <button onclick="document.getElementById('signUp').style.display = 'block';document.getElementById('initial').style.display = 'none';" class="pop-button">Get Started</button>
+        
+        </div>
+        <div class="sign-up" id="signUp">
+        <h2>Get Started</h2>
+<form onsubmit="localStorage.setItem('setup', 'complete');">
+    <div class="input_wrap input_exc_text" oninput="var CUsername = document.getElementById('name').value;localStorage.setItem('Cname', CUsername);">
+        <label>Username</label>
+        <input id="name" type="text" patter="^[A-Za-z0-9]*$" required>
+    </div>
+ 
+    <div class="input_wrap input_exc input_exc_text">
+        <label for="state">User Type</label>
+        <select name="b_state" required id="userType" oninput="var CCity = document.getElementById('userType').value;localStorage.setItem('City', CCity);">
+            <option value="" selected disabled hidden>Select User Type</option>
+            <option value="Normal">Normal</option>
+            <option value="Business">Business</option>
+          
+        </select>	
+    </div>
+
+    <div class="input_wrap input_exc input_exc_text">
+        <label for="state">State</label>
+        <select name="b_state" required id="state" oninput="var CState = document.getElementById('state').value;localStorage.setItem('CStateM', CState);">
+            <option value="" selected disabled hidden>Select State</option>
+            <option value="Alabama">Alabama</option>
+            <option value="Alaska">Alaska</option>
+            <option value="Arizona">Arizona</option>
+            <option value="Arkansas">Arkansas</option>
+            <option value="California">California</option>
+            <option value="Colorado">Colorado</option>
+            <option value="Connecticut">Connecticut</option>
+            <option value="Delaware">Delaware</option>
+            <option value="District Of Columbia">District Of Columbia</option>
+            <option value="Florida">Florida</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Hawaii">Hawaii</option>
+            <option value="Idaho">Idaho</option>
+            <option value="Illinois">Illinois</option>
+            <option value="Indiana">Indiana</option>
+            <option value="Iowa">Iowa</option>
+            <option value="Kansas">Kansas</option>
+            <option value="Kentucky">Kentucky</option>
+            <option value="Louisiana">Louisiana</option>
+            <option value="Maine">Maine</option>
+            <option value="Maryland">Maryland</option>
+            <option value="Massachusetts">Massachusetts</option>
+            <option value="Michigan">Michigan</option>
+            <option value="Minnesota">Minnesota</option>
+            <option value="Mississippi">Mississippi</option>
+            <option value="Missouri">Missouri</option>
+            <option value="Montana">Montana</option>
+            <option value="Nebraska">Nebraska</option>
+            <option value="Nevada">Nevada</option>
+            <option value="New Hampshire">New Hampshire</option>
+            <option value="New Jersey">New Jersey</option>
+            <option value="New Mexico">New Mexico</option>
+            <option value="New York">New York</option>
+            <option value="North Carolina">North Carolina</option>
+            <option value="North Dakota">North Dakota</option>
+            <option value="Ohio">Ohio</option>
+            <option value="Oklahoma">Oklahoma</option>
+            <option value="Oregon">Oregon</option>
+            <option value="Pennsylvania">Pennsylvania</option>
+            <option value="Rhode Island">Rhode Island</option>
+            <option value="South Carolina">South Carolina</option>
+            <option value="South Dakota">South Dakota</option>
+            <option value="Tennessee">Tennessee</option>
+            <option value="Texas">Texas</option>
+            <option value="Utah">Utah</option>
+            <option value="Vermont">Vermont</option>
+            <option value="Virginia">Virginia</option>
+            <option value="Washington">Washington</option>
+            <option value="West Virginia">West Virginia</option>
+            <option value="Wisconsin">Wisconsin</option>
+            <option value="Wyoming">Wyoming</option>
+        </select>	
+    </div>
+    <div class="input_wrap input_exc_text">
+        <label>City</label>
+        <input id="city" oninput="var CCity = document.getElementById('city').value;localStorage.setItem('City', CCity);" type="text" pattern="^[A-Za-z]*$" required>
+    </div>
+    <button class="pop-button input_exc_text" type="submit">Submit</button>
+</form>
+        </div>
+
+</div>
+<div class="credits">
+   <p>Developed By Jacoby Broadnax & Damion Dehart</p> 
+</div>
+</div>
+
 
 <header>
     <nav>
         <div class="logo_container">
-            <img src="images/logo.svg" alt="logo">
+            <img src="images/logo.svg" alt="logo" >
         </div>
     </nav>
+
 
     <!-----------------Search Input---------------------->
     <div class="search-wrapper" id="searchwrap">
         <div id="searchinput" class="search-input-container" id="search-container"> <input autocomplete="off" class="search-input"
-                type="search" id="search" onkeyup="searchinit()" placeholder="Search..."
+                type="search"  id="search" onkeyup="searchinit()" placeholder=""
                 title="Search"><i onclick="search()"
                     class="material-icons search-icon">search</i>
         </div>
-
+<div class="filter-indicator" ><p id="searchIndicator">Mississippi</p></div>
     </div>
 </header>
+
+
 
 
     <!-------------------------Context Popup------------------------>
@@ -109,8 +215,8 @@
         <div class="sub-pop">
             
             <div class="pop-text-container">
-                <h3>Null</h3>
-            <p>Null</p>
+                <h3 id="poph3">Null</h3>
+            <p id="popp">Null</p>
             </div>
             
       
@@ -151,6 +257,11 @@
 <!-----------------------Home Section------------------------------>
 
 <section id="home">
+
+
+
+<!----------------------------------Result------------------------------------------->
+
 <div class="result-container">
     <div id="result">
 
@@ -204,4 +315,20 @@
         }
     </script>
 
+     <!-------------------------TimeCheck---IDLocal-------------------------->
+
+    <script>
+        window.onload = function(){
+            var time = new Date();
+            var n = time.getDay();
+            if (window.localStorage["day"] == null){
+                window.localStorage.setItem("day", n)
+            }
+            if (window.localStorage["day"] != n){
+                window.localStorage.removeItem("ID")
+                window.localStorage.setItem("day", n)
+            }
+        }
+    </script>
 </body>
+

@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <div class="verification_wrap">
+    <div class="verification_wrap" id="verify">
       <h4>Verification</h4>
       <p>
         In order to post what items a business has in stock, we must verify you
@@ -31,5 +31,38 @@
         <input id="verify_submit" type="submit" value="Submit" />
       </form>
     </div>
+
+    <div class="verification_wrap" id="sorryID">
+      <h4>Sorry! No can do</h4>
+      <p>
+        We detected that you already have a post made, if you would like to update your business stock, delete your previous post or wait until the next day.
+      </p>
+    </div>
+
+    <script>
+      window.onload = function(){
+        var time = new Date();
+          var n = time.getDay();
+          if (window.localStorage["day"] == null){
+              window.localStorage.setItem("day", n)
+          }
+          if (window.localStorage["day"] != n){
+              window.localStorage.removeItem("ID")
+              window.localStorage.setItem("day", n)
+          }
+      }
+
+        if (window.localStorage["ID"] == null || window.localStorage["ID"] == ""){
+          document.getElementById("verify").style.display = "flex"
+          document.getElementById("sorryID").style.display = "none"
+        }
+        else{
+          document.getElementById("verify").style.display = "none"
+          document.getElementById("sorryID").style.display = "flex"
+        }
+
+    </script>
+
+
   </body>
 </html>
