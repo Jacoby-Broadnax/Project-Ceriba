@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/search.css" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-
+<script src="/military.js"></script>
 <!-----------------------Handlebars TE----------------------------->
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
@@ -28,35 +28,47 @@
  <ul>
     {{#each this}}
     <li>
-        <a href="">
+        <a href="#">
 <h3 class="inv-h3">{{store}}</h3>
 <p class="inv-p">{{location}}</p>
 
+
 <div class="inventory-status">
-    <div class="inventory-item {{water}}">
-        <img src="water.svg"><p>Water</p>
+    <div class="inventory-item {{emtuar}}">
+    <img onload="if ('{{emtuar}}' == 'false'){document.getElementById('jm{{id}}').innerHTML = 'null'}" src="/emtuar.svg"><p id='jm{{id}}'>Water</p>
     </div>
-    <div class="inventory-item {{meats}}">
-        <img src="meat.svg"><p>Meat</p>
+    <div class="inventory-item {{jmsdeu}}">
+        <img onload="if ('{{jmsdeu}}' == 'false'){document.getElementById('se{{id}}').innerHTML = 'null'}" src="/jmsdeu.svg"><p id="se{{id}}">Meat</p>
     </div>
-    <div class="inventory-item {{chicken}}" >
-        <img src="chicken.svg"><p>Chicken</p>
+  
+    <div class="inventory-item {{jzeurm}}">
+        <img onload="if ('{{jzeurm}}' == 'false'){document.getElementById('ru{{id}}').innerHTML = 'null'}" src="/jzeurm.svg"><p id="ru{{id}}">Masks</p>
     </div>
-    <div class="inventory-item {{faceMasks}}">
-        <img src="mask.svg"><p>Masks</p>
+    <div class="inventory-item {{uxyzqio}}">
+        <img onload="if ('{{uxyzqio}}' == 'false'){document.getElementById('qn{{id}}').innerHTML = 'null'}" src="/uxyzqio.svg"><p id="qn{{id}}">Cleaning Supplies</p>
     </div>
-   <div class="inventory-item {{toiletPaper}}">
+    <div class="inventory-item {{jplqwnrt}}">
         <img src="toliet.svg"><p>Toliet Paper</p>
     </div>
-    <div class="inventory-item {{cleaning}}">
-        <img src="clean.svg"><p>Cleaning Supplies</p>
+    <div class="inventory-item {{poyunz}}" >
+        <img src="chicken.svg"><p>Chicken</p>
     </div>
 
+    
+
 </div>
+
 <div class="hidden_meta_data">
+  
+    <p></p>
+    <p></p>
+    <p></p>
 
 </div>
         </a>
+  
+        <p  class="time-stamp">Posted At {{timestamp}}</p>
+        
     </li>
 {{/each}}
  </ul>

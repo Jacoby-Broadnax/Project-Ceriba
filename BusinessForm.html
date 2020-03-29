@@ -14,17 +14,17 @@
 
     <body onload="timestampJS()">
 
-    <div class="verification_wrap">
+    <div class="verification_wrap" id="businessForm">
         <h4>Fill out the form below</h4>
-        <form action="https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectCeriba/ceriba" id="post">
+        <form action="https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectCeriba/ceriba" id="post" onsubmit="bsCode()">
             <div class="input_wrap">
-                <label for="business_name">Buisiness Name</label>
-                <input id="business_name" type="text" name="b_name" pattern="^[^@=;\-&_'+,<>]*$" required>
+                <label for="business_name">Buisiness Name<p  id="bn" class="error">Incorrect Format!*</p></label>
+                <input id="business_name" type="text" name="b_name" pattern="^[^@=;\-&_'+,<>]*$" oninvalid="error1()" required>
             </div>
 
             <div class="input_wrap">
-                <label for="state">State</label>
-                <select name="b_state" required id="state">
+                <label for="state">State<p  id="sn" class="error">Incorrect Format!*</p></label>
+                <select name="b_state" required oninvalid="error2()" id="state">
                     <option value="" selected disabled hidden>Select State</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -81,18 +81,18 @@
             </div>
 
             <div class="input_wrap">
-                <label for="business_city">City</label>
-                <input id="business_city" name="b_city" type="text" pattern="^[A-Za-z]*$" required>
+                <label for="business_city">City<p  id="cn" class="error">Incorrect Format!*</p></label>
+                <input id="business_city" name="b_city" type="text" pattern="^[A-Za-z]*$" oninvalid="error3()" required>
             </div>
                 
             <div class="input_wrap">
-                <label for="address">Business Address</label>
-                <input id="address" type="text" name="b_address" pattern="^[^@=;\-&_'+,<>]*$" required>
+                <label for="address">Business Address<p  id="an" class="error">Incorrect Format!*</p></label>
+                <input id="address" type="text" name="b_address" pattern="^[^@=;\-&_'+,<>]*$" oninvalid="error4()" required>
             </div>
 
             <div class="input_wrap">
-                <label for="business_contact_number">Business Contact Number</label>
-                <input id="business_contact_number" name="b_tel" type="tel" pattern="^[0-9]*$" required>
+                <label for="business_contact_number">Business Contact Number<p  id="bcn" class="error">Incorrect Format!*</p></label>
+                <input id="business_contact_number" name="b_tel" type="tel" pattern="^[0-9]*$" oninvalid="error5()" required>
             </div>
             
             <div class="input_wrap">
@@ -118,18 +118,24 @@
                 </div>
             </div>
 
-            <button id="verify_submit" type="submit" value="Submit">Submit</button>
-            <input id="timeS" type="time" name="timeStamp" value="" hidden>
+            <button id="verify_submit" type="submit" value="Submit" onclick="resetstuff()">Submit</button>
+            <input id="timeS" type="text" name="timeStamp" value="" hidden>
         </form>
+    </div>
+
+    <div class="verification_wrap" id="businessCode">
+        <h4>Thank you for your contribution to the success of this app. Below is your ID</h4>
+        <h1>00-000-000</h1>
+        <p>This special ID is associated with your post. In order to delete your post, search for it in the search field. Then click on the Cog icon on your post. Then insert the above pin and the remove button will appear.</p>
+        <p>Every post made will be deleted at 2am cst in order to clear out outdated posts.</p>
+    
     </div>
 
     <script>
         function timestampJS(){
             var time = new Date();
-            var timeH = time.getHours();
-            var timeM = time.getMinutes();
-            var timestamp = String(timeH) + ":" + String(timeM);
-            document.getElementById("timeS").value = timestamp;
+            var timeStamp = time.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+            document.getElementById("timeS").value = timeStamp;
         }
 
         function error1(){
@@ -161,6 +167,13 @@
             document.getElementById("bcn").style.visibility = "hidden";
         }
 
+        function bsCode(){
+            document.getElementById("businessForm").style.display = "none"
+            document.getElementById("businessCode").style.display = "flex"
+
+        }
+
+    
 
     </script>
 

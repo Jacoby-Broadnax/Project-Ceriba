@@ -6,7 +6,7 @@
 
 label > img {
   transition: 0.2s ease;
-  width: 55px;
+  width: 50px;
   object-fit: cover;
   height: 55px;
   margin-left: 30px;
@@ -42,7 +42,7 @@ label > img:active {
 
 .bottom-nav-wrapper {
   margin: auto;
-  width: 330px;
+  width: 320px;
 }
 
 .bottom-navigation {
@@ -54,4 +54,8 @@ label > img:active {
   border-top: solid 1px lightgray;
   background-color: white;
   height: 55px;
+}
+
+@media screen and (orientation:landscape) {
+  .bottom-navigation {display: none;}
 }

@@ -25,9 +25,11 @@ $(document).ready(function () {
             },
             success: function () {
                 $('#success').show();
+                $('#post').hide();
             },
             error: function (xhr, res, text) {
-            console.log("An Error Occurred")
+            console.log("An Error Occurred");
+        
             }
         });
     });
