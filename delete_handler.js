@@ -1,5 +1,5 @@
-$(document).ready(function () {
-    $('#deleteItem').submit(function (e) {
+$(document).ready(function () { //this line is causing issuestry  if you want to see the issue go to business verification  
+    $('#delete').submit(function (e) {
         e.preventDefault();
         let form = $(this);
         $.ajax({

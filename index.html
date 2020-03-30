@@ -209,7 +209,7 @@
 
 <!---------------------------Account Iframe-------------------------->
 
-<div class="account-container" id="account">
+<div class="account-container vivify fadeIn" id="account">
     <iframe src="/BusinessForm.html"></iframe>
 </div>
 
@@ -280,6 +280,9 @@
 
 <!-----------------------Account Section--------------------------->
 
+<div class="account-container vivify fadeInBottom" id="account">
+<iframe src="/BusinessForm.html"></iframe>
+</div>
 
 <!----------------Bottom-Navigation-------------->
       <div class="bottom-navigation">
@@ -301,7 +304,7 @@
        
             
 
-            <div class="bottom-nav-button" onclick="view()">
+            <div class="bottom-nav-button" onclick="document.getElementById('account').style.display = 'block';">
                
                 <input id="nav-btn3" type="radio" name="bottom-nav" >
                 <label for="nav-btn3"><img src="/Assets/account.svg" alt="Account"></label>
