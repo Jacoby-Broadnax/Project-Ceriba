@@ -133,6 +133,7 @@ input[type="checkbox"]:checked + label > img {
   padding: 10px 30px;
   margin-top: 10px;
   align-self: center;
+  margin-bottom: 140px;
 }
 
 #businessCode{

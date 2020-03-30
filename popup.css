@@ -10,11 +10,11 @@
 
 .pop-button {width: 100%;background-color: #0889D1;height: 44px;border: none;margin-top: 10px;font-weight: bold;margin-bottom: 15px;color: white;}
 
-.spec {background-color: white;border: solid 1px lightgray;margin-bottom: 0px;}
+.spec {background-color: white;border: solid 1px lightgray;margin-bottom: 0px;color: black;}
 
 .sub-pop > .inventory-status > .inventory-item:first-of-type {margin-left: -11px;}
 
-
+.pop-close {position: fixed; top: 0px; left: 0px; width: 100%; height: 100vh;;;}
 
 #popup {display: none;}
 #popup:target {display: inline-block;}

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/main.css" type="text/css">
     <link rel="stylesheet" href="/bottom_navigation.css" type="text/css">
     <link rel="stylesheet" href="/search.css" type="text/css">
+    <link rel="manifest" href='/manifest.json'>
     <meta name="theme-color" content="#0889d1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -29,8 +30,8 @@
 <script id="item-template" type="text/x-handlebars-template">
  <ul>
     {{#each this}}
-    <li>
-        <a href="#popup" onclick="document.getElementById('Iemtuar').classList.add('{{emtuar}}');document.getElementById('Ijmsdeu').classList.add('{{jmsdeu}}');document.getElementById('Ijzeurm').classList.add('{{jzeurm}}');document.getElementById('Iuxyzqio').classList.add('{{uxyzqio}}');document.getElementById('Ijplqwnrt').classList.add('{{jplqwnrt}}');document.getElementById('Ipoyunz').classList.add('{{poyunz}}');document.getElementById('poph3').innerHTML='{{store}}';document.getElementById('popp').innerHTML='{{location}}';document.getElementById('storeButton').innerHTML='{{store}}'">
+    <li loading="lazy">
+        <a href="#popup" onclick="document.getElementById('Iemtuar').classList.add('{{emtuar}}');document.getElementById('Ijmsdeu').classList.add('{{jmsdeu}}');document.getElementById('Ijzeurm').classList.add('{{jzeurm}}');document.getElementById('Iuxyzqio').classList.add('{{uxyzqio}}');document.getElementById('Ijplqwnrt').classList.add('{{jplqwnrt}}');document.getElementById('Ipoyunz').classList.add('{{poyunz}}');document.getElementById('poph3').innerHTML='{{store}}';document.getElementById('popp').innerHTML='{{location}}';document.getElementById('storeButton').innerHTML='{{store}}';document.getElementById('phoneNumber').href = 'tel:{{phone}}';document.getElementById('directions').href ='';">
 <h3 class="inv-h3">{{store}}</h3>
 <p class="inv-p">{{location}}, {{state}}</p>
 
@@ -203,13 +204,18 @@
 
 
 
+<!---------------------------Account Iframe-------------------------->
+
+<div class="account-container" id="account">
+    <iframe src="/BusinessForm.html"></iframe>
+</div>
 
     <!-------------------------Context Popup------------------------>
 
     <div class="popup" id="popup">
-       <a href="">
+       <a href="#">
 
-  
+ <button class="pop-close" onclick="document.getElementById('Iemtuar').classList.remove('true');document.getElementById('Iemtuar').classList.remove('false');document.getElementById('Ijmsdeu').classList.remove('true');document.getElementById('Ijmsdeu').classList.remove('false');document.getElementById('Ijzeurm').classList.remove('true');document.getElementById('Ijzeurm').classList.remove('false');document.getElementById('Iuxyzqio').classList.remove('true');document.getElementById('Iuxyzqio').classList.remove('false');document.getElementById('Ijplqwnrt').classList.remove('true');document.getElementById('Ijplqwnrt').classList.remove('false');document.getElementById('Ipoyunz').classList.remove('true');document.getElementById('Ipoyunz').classList.remove('false');"></button>
        </a> 
         <div class="pop-bottom">
         <div class="sub-pop">
@@ -247,8 +253,8 @@
         
         </div>
         <div class="popup-buttons">
-            <a href=""><button class="pop-button spec">Get Directions</button></a>
-            <a href=""><button class="pop-button">Call <span id="storeButton">Null</span></button></a>
+            <a id="directions" href=""><button class="pop-button spec">Get Directions</button></a>
+            <a id="phoneNumber" href=""><button class="pop-button">Call <span id="storeButton">Null</span></button></a>
         </div>
     </div>
     </div>
@@ -293,11 +299,12 @@
             
 
             <div class="bottom-nav-button" onclick="view()">
-
+               
                 <input id="nav-btn3" type="radio" name="bottom-nav" >
                 <label for="nav-btn3"><img src="/Assets/account.svg" alt="Account"></label>
+        
             </div>
-
+      
         </div>
     </div>
 
