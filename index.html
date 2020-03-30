@@ -41,7 +41,7 @@
 
 <div class="inventory-status">
     <div class="inventory-item {{emtuar}}">
-    <img onload="if ('{{emtuar}}' == 'false'){document.getElementById('jm{{id}}').innerHTML = 'null';document.getElementById('jmA{{id}}').innerHTML = 'null'}" src="/emtuar.svg"><p id='jm{{id}}'><span id="jmA{{id}}" class="hidden_meta_data">{{state}}Water </span>Water</p>
+    <img onload="if ('{{emtuar}}' == 'false'){document.getElementById('jm{{id}}').innerHTML = 'null';document.getElementById('jmA{{id}}').innerHTML = 'null'}" src="/emtuar.svg"><p id='jm{{id}}'><span id="jmA{{id}}" class="hidden_meta_data">{{state}}Water</span>Water</p>
     </div>
     <div class="inventory-item {{jmsdeu}}">
         <img onload="if ('{{jmsdeu}}' == 'false'){document.getElementById('se{{id}}').innerHTML = 'null';document.getElementById('seA{{id}}').innerHTML = 'null'}" src="/jmsdeu.svg"><p id="se{{id}}"><span class="hidden_meta_data" id="seA{{id}}">{{state}}Meat</span>Meat</p>
@@ -205,7 +205,12 @@
     </div>
 </header>
 
+<!------------------------------Check out on Mobile-->
 
+<div class="mobile">
+    <h3>Visit Link On Mobile</h3>
+    <p>We Are A Mobile First Web App | Desktop Site Coming Sson</p>
+</div>
 
 <!---------------------------Account Iframe-------------------------->
 
@@ -215,12 +220,12 @@
 
     <!-------------------------Context Popup------------------------>
 
-    <div class="popup vivify fadeIn " id="popup">
+    <div class="popup vivify fadeIn duration-200" id="popup">
        <a href="#">
 
  <button class="pop-close" onclick="document.getElementById('Iemtuar').classList.remove('true');document.getElementById('Iemtuar').classList.remove('false');document.getElementById('Ijmsdeu').classList.remove('true');document.getElementById('Ijmsdeu').classList.remove('false');document.getElementById('Ijzeurm').classList.remove('true');document.getElementById('Ijzeurm').classList.remove('false');document.getElementById('Iuxyzqio').classList.remove('true');document.getElementById('Iuxyzqio').classList.remove('false');document.getElementById('Ijplqwnrt').classList.remove('true');document.getElementById('Ijplqwnrt').classList.remove('false');document.getElementById('Ipoyunz').classList.remove('true');document.getElementById('Ipoyunz').classList.remove('false');"></button>
        </a> 
-        <div class="pop-bottom vivify fadeInBottom duration-1000">
+        <div class="pop-bottom vivify fadeInBottom duration-200">
         <div class="sub-pop ">
             
             <div class="pop-text-container">
@@ -280,7 +285,7 @@
 
 <!-----------------------Account Section--------------------------->
 
-<div class="account-container vivify fadeInBottom" id="account">
+<div class="account-container" style="animation-duration: 100ms;" id="account">
 <iframe src="/BusinessForm.html"></iframe>
 </div>
 

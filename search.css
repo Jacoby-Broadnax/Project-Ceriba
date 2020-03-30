@@ -6,7 +6,7 @@
 .search-input {
   width: 100%;
   height: 45px;
-  padding-left: 35px;
+  padding-left: 34px;
   border-radius: 50px;
   border: none;
   background-color: #f4f4f4;
@@ -22,7 +22,7 @@
 
 .filter-indicator {position: absolute;top: 80px ;margin-left: 10px;}
 
-.filter-indicator > p {background-color: #0889d1;padding-top: 5px; padding-bottom: 5px; padding-left: 7px; padding-right: 7px;border-radius: 50px;color: white;}
+.filter-indicator > p {background-color: #0889d1;padding-top: 5px; padding-bottom: 5px; padding-left: 7px; padding-right: 7px;border-radius:50px;color: white;}
 
 @media screen and (orientation:landscape) {
   .search-input {margin-top: 10px;}
