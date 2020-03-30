@@ -13,8 +13,11 @@
     <link rel="stylesheet" href="/search.css" type="text/css">
     <link rel="manifest" href='/manifest.json'>
     <meta name="theme-color" content="#0889d1">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+      <link rel="stylesheet" href="/vivify.min.css">
 <!-----------------------Handlebars TE----------------------------->
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
@@ -30,9 +33,9 @@
 <script id="item-template" type="text/x-handlebars-template">
  <ul>
     {{#each this}}
-    <li loading="lazy">
+    <li class="vivify fadeIn delay-{{id}}00" loading="lazy">
         <a href="#popup" onclick="document.getElementById('Iemtuar').classList.add('{{emtuar}}');document.getElementById('Ijmsdeu').classList.add('{{jmsdeu}}');document.getElementById('Ijzeurm').classList.add('{{jzeurm}}');document.getElementById('Iuxyzqio').classList.add('{{uxyzqio}}');document.getElementById('Ijplqwnrt').classList.add('{{jplqwnrt}}');document.getElementById('Ipoyunz').classList.add('{{poyunz}}');document.getElementById('poph3').innerHTML='{{store}}';document.getElementById('popp').innerHTML='{{location}}';document.getElementById('storeButton').innerHTML='{{store}}';document.getElementById('phoneNumber').href = 'tel:{{phone}}';document.getElementById('directions').href ='';">
-<h3 class="inv-h3">{{store}}</h3>
+<h3  class="inv-h3">{{store}}</h3>
 <p class="inv-p">{{location}}, {{state}}</p>
 
 
@@ -83,17 +86,17 @@
 
 <div class="welcome" id="welcome" >
     <div class="sub-welcome">
-        <div class="initial" id="initial">
-            <div class="logo_container">
+        <div data-aos="fade-up" data-aos-delay="1000" class="initial" id="initial">
+            <div class="logo_container" >
                 <img onload="document.getElementById('welcome').classList.add(localStorage.getItem('setup'));document.getElementById('search').value =(localStorage.getItem('CStateM'));document.getElementById('searchIndicator').innerHTML = (localStorage.getItem('CStateM'));" src="images/logo.svg"  alt="logo">
             </div>
             <div class="banner-image">
                 <img src="/Images/undraw_healthy_options_sdo3.svg">
             </div>
-            <button onclick="document.getElementById('signUp').style.display = 'block';document.getElementById('initial').style.display = 'none';" class="pop-button">Get Started</button>
+            <button onclick="document.getElementById('signUp').style.display = 'block';document.getElementById('initial').style.display = 'none';" class="pop-button vivify pulsate infinite" >Get Started</button>
         
         </div>
-        <div class="sign-up" id="signUp">
+        <div  class="sign-up vivify fadeInBottom" id="signUp">
         <h2>Get Started</h2>
 <form onsubmit="localStorage.setItem('setup', 'complete');">
     <div class="input_wrap input_exc_text" oninput="var CUsername = document.getElementById('name').value;localStorage.setItem('Cname', CUsername);">
@@ -178,15 +181,15 @@
 
 </div>
 <div class="credits">
-   <p>Developed By Jacoby Broadnax & Damion Dehart</p> 
+   <p class="vivify fadeIn delay-1000">Developed By Jacoby Broadnax & Damion Dehart</p> 
 </div>
 </div>
 
 
-<header>
+<header class="vivify fadeIn delay-1000">
     <nav>
         <div class="logo_container">
-            <img src="images/logo.svg" alt="logo" >
+            <img class="" src="images/logo.svg" alt="logo" >
         </div>
     </nav>
 
@@ -212,13 +215,13 @@
 
     <!-------------------------Context Popup------------------------>
 
-    <div class="popup" id="popup">
+    <div class="popup vivify fadeIn " id="popup">
        <a href="#">
 
  <button class="pop-close" onclick="document.getElementById('Iemtuar').classList.remove('true');document.getElementById('Iemtuar').classList.remove('false');document.getElementById('Ijmsdeu').classList.remove('true');document.getElementById('Ijmsdeu').classList.remove('false');document.getElementById('Ijzeurm').classList.remove('true');document.getElementById('Ijzeurm').classList.remove('false');document.getElementById('Iuxyzqio').classList.remove('true');document.getElementById('Iuxyzqio').classList.remove('false');document.getElementById('Ijplqwnrt').classList.remove('true');document.getElementById('Ijplqwnrt').classList.remove('false');document.getElementById('Ipoyunz').classList.remove('true');document.getElementById('Ipoyunz').classList.remove('false');"></button>
        </a> 
-        <div class="pop-bottom">
-        <div class="sub-pop">
+        <div class="pop-bottom vivify fadeInBottom duration-1000">
+        <div class="sub-pop ">
             
             <div class="pop-text-container">
                 <h3 id="poph3">Null</h3>
@@ -337,5 +340,8 @@
             }
         }
     </script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 

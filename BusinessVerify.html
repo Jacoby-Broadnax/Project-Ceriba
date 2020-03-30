@@ -15,6 +15,27 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     
+    <script type="text/javascript">
+
+      function callit() {
+        var link = "https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectCeriba/ceriba";
+          var idNum = document.getElementById("idsT").value;
+          var actionlink = link + "/" + String(idNum);
+             $.getJSON(actionlink, function (data) {
+              var template = Handlebars.compile($('#item-template').html())
+              $('#result').html(template(data.ceriba))
+          })
+      }
+  </script>
+  
+  <script id="item-template" type="text/x-handlebars-template">
+   <ul>
+    <span>{{timestamp}}</span>
+  <span>ID{{id}}</span>
+
+   </ul>
+  </script>
+
   </head>
 
   <body>
@@ -46,7 +67,14 @@
         <input id="ids" type="text" name="id" pattern="^[0-9]*$"  required/>
         <input id="verify_submit" type="submit" value="Submit" />
       </form>
+      
+      <form  id="test" onsubmit="callit()">
+        <input id="idsT" type="text" name="id" pattern="^[0-9]*$"  required/>
+        <input id="verify_submit" type="submit" value="Submit" />
+      </form>
     </div>
+
+    <div id="result"></div>
 
     <script>
       window.onload = function(){
@@ -64,10 +92,12 @@
         if (window.localStorage["ID"] == null || window.localStorage["ID"] == ""){
           document.getElementById("verify").style.display = "flex"
           document.getElementById("sorryID").style.display = "none"
+          document.getElementById("test").style.display = "none"
         }
         else{
           document.getElementById("verify").style.display = "none"
           document.getElementById("sorryID").style.display = "flex"
+          document.getElementById("test").style.display = "flex"
         }
 
         function bsCode(){
