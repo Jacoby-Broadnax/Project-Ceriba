@@ -116,6 +116,12 @@
                 <label for="business_contact_number">Business Contact Number<p  id="bcn" class="error">Incorrect Format!*</p></label>
                 <input id="business_contact_number" name="b_tel" type="tel" pattern="^[0-9]*$" oninvalid="error5()" required>
             </div>
+
+            <div class="input_wrap">
+                <label for="password">Enter a password<p  id="pn" class="error">Incorrect Format!*</p></label>
+                <input id="password" type="text" name="b_pass" pattern="^[^@=;\-&_'+,<>]*$" oninvalid="error4()" required>
+            </div>
+            
             
             <div class="input_wrap">
                 <label>Products in Stock</label>

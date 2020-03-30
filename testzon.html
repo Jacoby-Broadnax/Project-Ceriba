@@ -13,7 +13,44 @@
     <link rel="icon" href="favicon.ico" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="delete_handler.js"></script>
+<script>
+  $(document).ready(function () { //this line is causing issuestry  if you want to see the issue go to business verification  
+    $('#delete').submit(function (e) {
+        e.preventDefault();
+        let form = $(this);
+        $.ajax({
+            type: 'delete',
+            dataType: 'json',
+            url: form.attr('action'),
+            data: {
+                ceriba: {
+                    emtuar: $('#water').is(':checked'),
+                    state: $('#state').val(),
+                    business_city: $('#business_city').val(),
+                    address: $('#address').val(),
+                    phone: $('#business_contact_number').val(),
+                    store: $('#business_name').val(),
+                    jmsdeu: $('#meat').is(':checked'),
+                    location: $('#business_city').val(),
+                    timestamp: $('#timeS').val(),
+                    jplqwnrt: $('#toilet').is(':checked'),
+                    jzeurm: $('#mask').is(':checked'),
+                    uxyzqio: $('#cleaning').is(':checked'),
+                    poyunz: $('#chicken').is(':checked'), 
+                }
+            },
+            success: function () {
+                $('#success').show();
+                $('#post').hide();
+            },
+            error: function (xhr, res, text) {
+            console.log("An Error Occurred");
+        alert('delete complete')
+            }
+        });
+    });
+});
+</script>
   </head>
 
   <body>
@@ -40,110 +77,11 @@
         We detected that you already have a post made, if you would like to update your business stock, delete your previous post or wait until the next day.
       </p>
 
-      <form  id="deleteItem" action="https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectCeriba/ceriba/3">
-        <div class="input_wrap">
-            <label for="business_name">Buisiness Name<p  id="bn" class="error">Incorrect Format!*</p></label>
-            <input id="business_name" type="text" name="b_name"*$" oninvalid="error1()" >
-        </div>
-
-        <div class="input_wrap">
-            <label for="state">State<p  id="sn" class="error">Incorrect Format!*</p></label>
-            <select name="b_state" oninvalid="error2()" id="state">
-                <option value="" selected disabled hidden>Select State</option>
-                <option value="Alabama">Alabama</option>
-                <option value="Alaska">Alaska</option>
-                <option value="Arizona">Arizona</option>
-                <option value="Arkansas">Arkansas</option>
-                <option value="California">California</option>
-                <option value="Colorado">Colorado</option>
-                <option value="Connecticut">Connecticut</option>
-                <option value="Delaware">Delaware</option>
-                <option value="District Of Columbia">District Of Columbia</option>
-                <option value="Florida">Florida</option>
-                <option value="Georgia">Georgia</option>
-                <option value="Hawaii">Hawaii</option>
-                <option value="Idaho">Idaho</option>
-                <option value="Illinois">Illinois</option>
-                <option value="Indiana">Indiana</option>
-                <option value="Iowa">Iowa</option>
-                <option value="Kansas">Kansas</option>
-                <option value="Kentucky">Kentucky</option>
-                <option value="Louisiana">Louisiana</option>
-                <option value="Maine">Maine</option>
-                <option value="Maryland">Maryland</option>
-                <option value="Massachusetts">Massachusetts</option>
-                <option value="Michigan">Michigan</option>
-                <option value="Minnesota">Minnesota</option>
-                <option value="Mississippi">Mississippi</option>
-                <option value="Missouri">Missouri</option>
-                <option value="Montana">Montana</option>
-                <option value="Nebraska">Nebraska</option>
-                <option value="Nevada">Nevada</option>
-                <option value="New Hampshire">New Hampshire</option>
-                <option value="New Jersey">New Jersey</option>
-                <option value="New Mexico">New Mexico</option>
-                <option value="New York">New York</option>
-                <option value="North Carolina">North Carolina</option>
-                <option value="North Dakota">North Dakota</option>
-                <option value="Ohio">Ohio</option>
-                <option value="Oklahoma">Oklahoma</option>
-                <option value="Oregon">Oregon</option>
-                <option value="Pennsylvania">Pennsylvania</option>
-                <option value="Rhode Islan">Rhode Island</option>
-                <option value="South Carolina">South Carolina</option>
-                <option value="South Dakota">South Dakota</option>
-                <option value="Tennessee">Tennessee</option>
-                <option value="Texas">Texas</option>
-                <option value="Utah">Utah</option>
-                <option value="Vermont">Vermont</option>
-                <option value="Virginia">Virginia</option>
-                <option value="Washington">Washington</option>
-                <option value="West Virginia">West Virginia</option>
-                <option value="Wisconsin">Wisconsin</option>
-                <option value="Wyoming">Wyoming</option>
-            </select>	
-        </div>
-
-        <div class="input_wrap">
-            <label for="business_city">City<p  id="cn" class="error">Incorrect Format!*</p></label>
-            <input id="business_city" name="b_city" type="text"oninvalid="error3()" >
-        </div>
-            
-        <div class="input_wrap">
-            <label for="address">Business Address<p  id="an" class="error">Incorrect Format!*</p></label>
-            <input id="address" type="text" name="b_address"*$" oninvalid="error4()" >
-        </div>
-
-        <div class="input_wrap">
-            <label for="business_contact_number">Business Contact Number<p  id="bcn" class="error">Incorrect Format!*</p></label>
-            <input id="business_contact_number" name="b_tel" type="tel" oninvalid="error5()" >
-        </div>
-        
-        <div class="input_wrap">
-            <label>Products in Stock</label>
-            <div class="check_wrap">
-                <input type="checkbox" id="water" name="water">
-                <label for="water"><img src="water.svg"><p>Water</p></label>
-
-                <input type="checkbox" id="meat"  name="meat">
-                <label for="meat"><img src="meat.svg"><p>Meat</p></label>
-
-                <input type="checkbox" id="chicken"  name="chicken">
-                <label for="chicken"><img src="chicken.svg"><p>Chicken</p></label>
-
-                <input type="checkbox" id="mask"  name="mask">
-                <label for="mask"><img src="mask.svg"><p>Masks</p></label>
-
-                <input type="checkbox" id="toilet"  name="toilet">
-                <label for="toilet" id><img src="toliet.svg"><p>Toliet Paper</p></label>
-
-                <input type="checkbox" id="cleaning"  name="cleaning">
-                <label for="cleaning" id><img src="clean.svg"><p>Cleaning Supplies</p></label>
-            </div>
-        </div>
+      <form  id="delete" action="https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectCeriba/ceriba/5">
+       
 
         <button  type="submit" >Submit</button>
-        <input id="timeS" type="text" name="timeStamp" value="" hidden>
+       
        
       </form>
     </div>

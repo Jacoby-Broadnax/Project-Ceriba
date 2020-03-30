@@ -29,7 +29,7 @@ $(document).ready(function () { //this line is causing issuestry  if you want to
             },
             error: function (xhr, res, text) {
             console.log("An Error Occurred");
-        
+        alert('delete complete')
             }
         });
     });

@@ -73,20 +73,8 @@ function callit() {
   <script id="item-template" type="text/x-handlebars-template">
     <ul>
       
-   <span id="id">{{id}}</span>
-    <span id="store">{{store}}</span>
-    <span id="phone">{{phone}}</span>
-    <span id="timestamp">{{timestamp}}</span>
-    <span id="datestamp">{{datestamp}}</span>
-    <span id="state">{{state}}</span>
-    <span id="city">{{city}}</span>
-    <span id="address">{{address}}</span>
-    <span id="emtuar">{{emtuar}}</span>
-    <span id="jmsdeu">{{jmsdeu}}</span>
-    <span id="jzeurm">{{jzeurm}}</span>
-    <span id="uxyzqio">{{uxyzqio}}</span>
-    <span id="jplqwnrt">{{jplqwnrt}}</span>
-    <span id="poyunz">{{poyunz}}</span>
+   <span id="password">{{pass}}</span>
+ 
     </ul>
    </script>
 
@@ -119,21 +107,8 @@ function callit() {
 
      
       
-      <form  id="delete" onsubmit="bsCode()">
-        <input id="qq" type="text" name="id" pattern="^[A-Za-z0-9]*$"  required/>
-        <input id="ww" type="text" name="b_name" pattern="^[A-Za-z0-9]*$"  />
-        <input id="ee" type="text" name="b_tel" pattern="^[A-Za-z0-9]*$"  />
-        <input id="rr" type="text" name="timestamp" pattern="^[A-Za-z0-9 ]*$"  />
-        <input id="tt" type="text" name="datestamp" pattern="^[A-Za-z0-9]*$" />
-        <input id="yy" type="text"  name="b_state" pattern="^[A-Za-z0-9]*$"  />
-        <input id="uu" type="text" name="b_city" pattern="^[A-Za-z0-9]*$"  />
-        <input id="ii" type="text" name="water" pattern="^[A-Za-z0-9]*$"  />
-        <input id="oo" type="text" name="meat" pattern="^[A-Za-z0-9]*$"  />
-        <input id="pp" type="text" name="mask" pattern="^[A-Za-z0-9]*$"  />
-        <input id="aa" type="text" name="toilet" pattern="^[A-Za-z0-9]*$"  />
-        <input id="ss" type="text" name="cleaning" pattern="^[A-Za-z0-9]*$" />
-        <input id="dd" type="text" name="chicken" pattern="^[A-Za-z0-9]*$" />
-        <input id="ff" type="text" name="b_address" pattern="^[A-Za-z0-9]*$" />
+      <form id="delete" onsubmit="bsCode()">
+
       </form>
 
         <input id="idsT" type="text" name="id" pattern="^[0-9]*$"  required/>
@@ -175,34 +150,7 @@ function callit() {
       }
 
       function isolateid(){
-          var q = document.getElementById("id").innerHTML
-          var w = document.getElementById("store").innerHTML
-          var e = document.getElementById("phone").innerHTML
-          var r = document.getElementById("id").innerHTML
-          var t = document.getElementById("datestamp").innerHTML
-          var y = document.getElementById("state").innerHTML
-          var u = document.getElementById("city").innerHTML
-          var f = document.getElementById("address").innerHTML
-          var i = document.getElementById("emtuar").innerHTML
-          var o = document.getElementById("jmsdeu").innerHTML
-          var p = document.getElementById("jzeurm").innerHTML
-          var a = document.getElementById("uxyzqio").innerHTML
-          var s = document.getElementById("jplqwnrt").innerHTML
-          var d = document.getElementById("poyunz").innerHTML
-          document.getElementById("qq").value = q
-          document.getElementById("ww").value = w
-          document.getElementById("ee").value = e
-          document.getElementById("rr").value = r
-          document.getElementById("tt").value = t
-          document.getElementById("yy").value = y
-          document.getElementById("uu").value = u
-          document.getElementById("ii").value = i
-          document.getElementById("oo").value = o
-          document.getElementById("pp").value = p
-          document.getElementById("aa").value = a
-          document.getElementById("ss").value = s
-          document.getElementById("dd").value = d
-          document.getElementById("ff").value = f
+         
           document.getElementById("delete").submit();
 
           
@@ -222,10 +170,10 @@ function callit() {
         }
 
         function bsCode(){
-          var link = "https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectCeriba/ceriba";
-          var idNum = document.getElementById("idsT").value;
-          var actionlink = link + "/" + String(idNum);
-          document.getElementById("delete").setAttribute("action", actionlink)
+          // var link = "https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectCeriba/ceriba";
+          // var idNum = document.getElementById("idsT").value;
+          // var actionlink = link + "/" + String(idNum);
+          // document.getElementById("delete").setAttribute("action", actionlink)
           window.location.replace("../BusinessVerify.html")
         }
 
