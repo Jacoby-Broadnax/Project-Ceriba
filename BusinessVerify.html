@@ -81,6 +81,7 @@ function callit() {
     <span id="datestamp">{{datestamp}}</span>
     <span id="state">{{state}}</span>
     <span id="city">{{city}}</span>
+    <span id="address">{{address}}</span>
     <span id="emtuar">{{emtuar}}</span>
     <span id="jmsdeu">{{jmsdeu}}</span>
     <span id="jzeurm">{{jzeurm}}</span>
@@ -133,6 +134,7 @@ function callit() {
         <input id="aa" type="text" name="uxyzqio" pattern="^[A-Za-z0-9]*$"  />
         <input id="ss" type="text" name="jplqwnrt" pattern="^[A-Za-z0-9]*$" />
         <input id="dd" type="text" name="poyunz" pattern="^[A-Za-z0-9]*$" />
+        <input id="ff" type="text" name="b_address" pattern="^[A-Za-z0-9]*$" />
       </form>
 
         <input id="idsT" type="text" name="id" pattern="^[0-9]*$"  required/>
@@ -181,6 +183,7 @@ function callit() {
           var t = document.getElementById("datestamp").innerHTML
           var y = document.getElementById("state").innerHTML
           var u = document.getElementById("city").innerHTML
+          var f = document.getElementById("address").innerHTML
           var i = document.getElementById("emtuar").innerHTML
           var o = document.getElementById("jmsdeu").innerHTML
           var p = document.getElementById("jzeurm").innerHTML
@@ -200,7 +203,8 @@ function callit() {
           document.getElementById("aa").value = a
           document.getElementById("ss").value = s
           document.getElementById("dd").value = d
-          document.getElementById("delete").submit();
+          document.getElementById("ff").value = f
+          //document.getElementById("delete").submit();
 
           
       }
