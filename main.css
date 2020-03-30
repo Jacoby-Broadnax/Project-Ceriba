@@ -104,6 +104,10 @@ nav {
 
 .exc {padding-left: 10px;}
 
+.sign-up > form {margin: auto;width: 300px;}
+
+.sign-up > form > .input_wrap > input {width:290px;padding: 0px;padding-top: 10px;padding-left: 10px;}
+
 .exc > p {margin-left: 0px;}
 
 .fixed-item {position: sticky;background-color: white; z-index: 15;margin-left: 15px;}

@@ -62,7 +62,6 @@ function callit() {
         var link = "https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectCeriba/ceriba";
           var idNum = document.getElementById("idsT").value;
           var actionlink = link + "/" + String(idNum);
-          document.getElementById("delete").setAttribute("action", actionlink)
              $.getJSON(actionlink, function (data) {
               var template = Handlebars.compile($('#item-template').html())
               $('#outputid').html(template(data.ceriba))
@@ -122,18 +121,18 @@ function callit() {
       
       <form  id="delete" onsubmit="bsCode()">
         <input id="qq" type="text" name="id" pattern="^[A-Za-z0-9]*$"  required/>
-        <input id="ww" type="text" name="b_name pattern="^[A-Za-z0-9]*$"  />
-        <input id="ee" type="text" name="phone" pattern="^[A-Za-z0-9]*$"  />
+        <input id="ww" type="text" name="b_name" pattern="^[A-Za-z0-9]*$"  />
+        <input id="ee" type="text" name="b_tel" pattern="^[A-Za-z0-9]*$"  />
         <input id="rr" type="text" name="timestamp" pattern="^[A-Za-z0-9 ]*$"  />
         <input id="tt" type="text" name="datestamp" pattern="^[A-Za-z0-9]*$" />
         <input id="yy" type="text"  name="b_state" pattern="^[A-Za-z0-9]*$"  />
         <input id="uu" type="text" name="b_city" pattern="^[A-Za-z0-9]*$"  />
-        <input id="ii" type="text" name="emtuar" pattern="^[A-Za-z0-9]*$"  />
-        <input id="oo" type="text" name="jmsdeu" pattern="^[A-Za-z0-9]*$"  />
-        <input id="pp" type="text" name="jzeurm" pattern="^[A-Za-z0-9]*$"  />
-        <input id="aa" type="text" name="uxyzqio" pattern="^[A-Za-z0-9]*$"  />
-        <input id="ss" type="text" name="jplqwnrt" pattern="^[A-Za-z0-9]*$" />
-        <input id="dd" type="text" name="poyunz" pattern="^[A-Za-z0-9]*$" />
+        <input id="ii" type="text" name="water" pattern="^[A-Za-z0-9]*$"  />
+        <input id="oo" type="text" name="meat" pattern="^[A-Za-z0-9]*$"  />
+        <input id="pp" type="text" name="mask" pattern="^[A-Za-z0-9]*$"  />
+        <input id="aa" type="text" name="toilet" pattern="^[A-Za-z0-9]*$"  />
+        <input id="ss" type="text" name="cleaning" pattern="^[A-Za-z0-9]*$" />
+        <input id="dd" type="text" name="chicken" pattern="^[A-Za-z0-9]*$" />
         <input id="ff" type="text" name="b_address" pattern="^[A-Za-z0-9]*$" />
       </form>
 
@@ -204,7 +203,7 @@ function callit() {
           document.getElementById("ss").value = s
           document.getElementById("dd").value = d
           document.getElementById("ff").value = f
-          //document.getElementById("delete").submit();
+          document.getElementById("delete").submit();
 
           
       }
@@ -223,8 +222,11 @@ function callit() {
         }
 
         function bsCode(){
+          var link = "https://v2-api.sheety.co/1c0174d5b32dbebdf6f1e14d6ba67a4f/projectCeriba/ceriba";
+          var idNum = document.getElementById("idsT").value;
+          var actionlink = link + "/" + String(idNum);
+          document.getElementById("delete").setAttribute("action", actionlink)
           window.location.replace("../BusinessVerify.html")
-          
         }
 
     </script>
